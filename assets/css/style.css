@@ -1,0 +1,281 @@
+:root {
+  --lightpink: #fecaca;
+  --pink: #ff9191;
+  --darkpink: #ff284c;
+  --lightgrey: #afafaf;
+  --grey: #333;
+  --black: #000000;
+  --white: #ffffff;
+  --red: #e70000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 26px;
+}
+
+body {
+  font-family: "Handlee", cursive;
+  background-color: aquamarine;
+}
+
+.header {
+  background-color: var(--grey);
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 5px; /* Add margin to the bottom of the header */
+  height: 60px; /* Fixed height for the header */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar li:last-child {
+  margin-right: 0;
+}
+
+.navbar li a {
+  color: var(--pink);
+  text-decoration: none;
+  padding: 10px 45px;
+  /* border-radius: 5px; */
+  background-color: var(--grey);
+}
+
+.navbar li a:hover {
+  color: var(--white);
+}
+
+/* Styles for the menu icon */
+/* Hide menu icon by default */
+.menu-icon {
+  display: none;
+}
+
+/* Media query for screens below 775px */
+@media screen and (max-width: 775px) {
+  .header {
+    height: 70px; /* Maintain the same height */
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 5px 0;
+  }
+
+  /* Show menu links when menu icon is clicked */
+  #menu-links {
+    display: none; /* Hide menu links by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--grey);
+  }
+
+  #menu-links.show {
+    display: inline-flex;
+  }
+
+  #menu-links.show li {
+    text-align: center;
+  }
+}
+
+.container {
+  max-width: 80%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.box {
+  margin-top: 5px; /* Add margin-top to bring the box closer to the header */
+  margin-bottom: 50px;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box img {
+  display: block; /* Ensure the image behaves as a block element */
+  margin: 0 auto 0px; /* Center the image horizontally and add margin below */
+  width: 400px;
+  height: auto;
+  font-size: 26px;
+}
+@media screen and (max-width: 700px) {
+  .box {
+    padding: 1em; /* Reduce padding */
+    margin-bottom: 62px;
+  }
+
+  .box img {
+    width: 80%; /* Reduce image width */
+  }
+
+  .button {
+    padding: 8px 16px; /* Reduce button padding */
+    font-size: 14px; /* Reduce button font size */
+  }
+
+  .cupcake-img,
+  .cupcake-img2 {
+    width: 75%; /* Reduce cupcake icon width */
+    padding: 2%; /* Set maximum width */
+    /* height: auto; */
+  }
+}
+
+.button {
+  background-color: var(white);
+  color: var(--darkpink);
+  border: none;
+  border-radius: 20px 20px 20px 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  display: block; /* Ensure the button behaves as a block element */
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+.button:hover {
+  color: var(--red);
+}
+
+.news {
+  width: 80%;
+  background: var(--lightpink) !important;
+  padding: 16px;
+  border: solid 2px var(--black) !important;
+  text-align: center !important;
+  margin-bottom: 100px;
+  position: relative !important;
+  word-spacing: 8px;
+  /* height: 80vh; Adjust the height as needed */
+}
+
+.cupcake-img {
+  width: 60px;
+  height: auto;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: -100px; /* Adjust as needed to position the cupcake images */
+}
+
+.cupcake-img2 {
+  width: 60px;
+  height: auto;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -100px; /* Adjust as needed to position the cupcake images */
+}
+
+.cupcake-img {
+  left: -25px;
+}
+
+.cupcake-img2 {
+  right: -25px;
+}
+
+.news li {
+  list-style-type: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--black);
+}
+
+.modal-content {
+  background-color: var(--white);
+  margin-left: 15% auto;
+  padding: 20px;
+  border: 1px solid var(--lightgrey);
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-content form label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.close {
+  color: var(--lightgrey);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.footer {
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 50px;
+    align-items: center;
+    text-align: center;
+}

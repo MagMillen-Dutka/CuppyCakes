@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <a href="https://www.vecteezy.com/free-png/cupcake"></a>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar" id="navbar">
+            <ul id="menu-links" class="menu-links">
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="box">
+            <img src="/assets/images/CuppyCakes.png" alt="CuppyCakes Logo"> <!-- New logo -->
+            <button id="loginButton" class="button" onclick="openModal()">Register for our Newsletter</button>
+            <div id="loginModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <form id="loginForm">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email-login" name="email-login" required>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password-login" name="password-login" required>
+                        <button type="submit" class="button">Submit</button>
+                        <button type="button" id="cancelButton" class="button" onclick="closeModal()">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="news">
+            <img src="/assets/images/vecteezy_heart-cupcake_1187721.png" class="cupcake-img">
+            <img src="/assets/images/vecteezy_heart-cupcake_1187721.png" class="cupcake-img2">
+            <p>Introducing the most delicious cupcakes for any occasion!</p>
+            <br>
+            <p>We are based in the lovely little town of MadeUpsVille, situated next to the beautiful and scenic riverside.</p>
+            <br>
+            <p>Come down and join us for a cupcake and coffee.</p>
+            <br>
+            <ul>
+                <li>Monday: 09:00 until 16:00</li>
+                <li>Tuesday: 09:00 until 16:00</li>
+                <li>Wednesday: 09:00 until 16:00</li>
+                <li>Thursday: 09:00 until 16:00</li>
+                <li>Friday: 09:00 until 16:00</li>
+                <li>Satursday: 09:00 until 16:00</li>
+                <li>Sunday: Closed</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <script src="/assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/b47cf5ff60.js" crossorigin="anonymous"></script>
+</body>
+<footer class="footer">
+    <i class="fa-brands fa-linkedin"></i>
+    <i class="fa-brands fa-x-twitter"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-tiktok"></i>
+    <br>
+    <br>
+    <p>Connect on Social Media, keep updated - Go on, do it!</p>
+    <br>
+    <p><span>© Copyright 2024</span></p>
+
+</footer>
+</html>
